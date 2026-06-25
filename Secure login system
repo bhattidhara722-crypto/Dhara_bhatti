@@ -1,0 +1,30 @@
+users = {}
+
+while True:
+    print("\n1. Register")
+    print("2. Login")
+    print("3. Exit")
+
+    choice = input("Enter Choice: ")
+
+    if choice == "1":
+        user = input("Username: ")
+        pwd = input("Password: ")
+        users[user] = pwd
+        print("Registration Successful!")
+
+    elif choice == "2":
+        user = input("Username: ")
+        pwd = input("Password: ")
+
+        if user in users and users[user] == pwd:
+            print("Login Successful!")
+        else:
+            print("Invalid Username or Password!")
+
+    elif choice == "3":
+        print("Program Closed")
+        break
+
+    else:
+        print("Invalid Choice!")
